@@ -8,13 +8,14 @@
     "@types/fs-extra": "^0.0.37",
     "@types/moment-timezone": "^0.2.34",
     "archiver": "^1.3.0",
-    "aws-sdk": "^2.7.22",
     "fs-extra": "^2.0.0"
   },
   "dependencies": {
+    "aws-sdk": "^2.7.25",
     "moment-timezone": "^0.5.11"
   },
   "scripts": {
-    "package": "node script/package.js"
+    "package": "powershell script/Package-Modules.ps1",
+    "deploy": "powershell script/Deploy-Package.ps1"
   }
 }

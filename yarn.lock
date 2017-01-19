@@ -55,9 +55,9 @@ async@^2.0.0:
   dependencies:
     lodash "^4.14.0"
 
-aws-sdk@^2.7.22:
-  version "2.7.22"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.7.22.tgz#a35161f1bcadc156e26f92998c84f4cdeb7793a2"
+aws-sdk@^2.7.25:
+  version "2.7.25"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.7.25.tgz#f65ded13b4e39ae155ce738c611af191ae9f9e94"
   dependencies:
     buffer "4.9.1"
     crypto-browserify "1.0.9"
