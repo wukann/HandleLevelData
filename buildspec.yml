@@ -12,11 +12,8 @@ phases:
   build:
     commands:
       - yarn install
-      - mkdir -p ./tmp/node_modules ./dist 
-      - cp ./src/index.js ./tmp/
-      - cp -r ./node_modules/moment ./tmp/node_modules/moment
-      - cp -r ./node_modules/moment-timezone ./tmp/node_modules/moment-timezone
-      - cd ./tmp & zip HandleLevelData.zip ./* & mv HandleLevelData.zip ../dist/ & cd
+      - mkdir dist 
+      - zip -r dist/HandleLevelData.zip index.js node_modules/moment node_modules/moment-timezone
 artifacts:
   files:
     - "./dist/*"
