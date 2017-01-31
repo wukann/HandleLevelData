@@ -16,9 +16,8 @@ phases:
       - cp ./src/index.js ./tmp/
       - cp -r ./node_modules/moment ./tmp/node_modules/moment
       - cp -r ./node_modules/moment-timezone ./tmp/node_modules/moment-timezone
-      - cd ./tmp & zip HandleLevelData.zip ./* & mv HandleLevelData.zip ../dist/
+      - cd ./tmp & zip HandleLevelData.zip ./* & mv HandleLevelData.zip ../dist/ & cd
 artifacts:
-  type: zip
   files:
     - "./dist/*"
   discard-paths: no
