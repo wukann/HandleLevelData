@@ -5,17 +5,18 @@ phases:
   install:
     commands:
       - apt-get update -y
-      - apt-get install yarn@0.19.1
+      - apt-get install yarn
   pre_build:
     commands:
       - echo Nothing to do in the pre_build phase...
   build:
     commands:
       - yarn install
-      - mkdir -p ./dist/node_modules
-      - cp ./src/index.js ./dist/
-      - cp -r ./node_modules/moment ./dist/node_modules/moment
-      - cp -r ./node_modules/moment-timezone ./dist/node_modules/moment-timezone
+      - mkdir -p ./tmp/node_modules ./dist 
+      - cp ./src/index.js ./tmp/
+      - cp -r ./node_modules/moment ./tmp/node_modules/moment
+      - cp -r ./node_modules/moment-timezone ./tmp/node_modules/moment-timezone
+      - cd ./tmp & zip HandleLevelData.zip ./* & mv HandleLevelData.zip ../dist/
 artifacts:
   type: zip
   files:
