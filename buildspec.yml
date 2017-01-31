@@ -4,22 +4,19 @@ version: 0.1
 phases:
   install:
     commands:
-      - npm install yarn -g
+      - npm install yarn@0.19.1 -g
   pre_build:
     commands:
       - echo Nothing to do in the pre_build phase...
   build:
     commands:
       - yarn install
-      - mkdir ./tmp
-      - mkdir ./tmp/node_modules
-      - cp ./src/index.js tmp/
-      - cp -r ./node_modules/moment ./tmp/node_modules/moment
-      - cp -r ./node_modules/moment-timezone ./tmp/node_modules/moment-timezone
-      - mkdir ./dist
-      - zip -r ./dist/HandleLevelData.zip ./tmp/*
+      - mkdir -p ./dist/node_modules
+      - cp ./src/index.js ./dist/
+      - cp -r ./node_modules/moment ./dist/node_modules/moment
+      - cp -r ./node_modules/moment-timezone ./dist/node_modules/moment-timezone
 artifacts:
   type: zip
   files:
-    - "dist/*"
+    - "./dist/*"
   discard-paths: no
