@@ -4,7 +4,8 @@ version: 0.1
 phases:
   install:
     commands:
-      - npm install yarn@0.19.1 -g
+      - apt-get update -y
+      - apt-get install yarn@0.19.1
   pre_build:
     commands:
       - echo Nothing to do in the pre_build phase...
