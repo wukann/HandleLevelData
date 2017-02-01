@@ -13,7 +13,7 @@ phases:
     commands:
       - yarn install
       - mkdir dist 
-      - zip -r dist/HandleLevelData.zip index.js node_modules/moment node_modules/moment-timezone
+      - zip -r dist/package.zip index.js node_modules/moment node_modules/moment-timezone
 artifacts:
   files:
     - "./dist/*"
